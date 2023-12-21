@@ -5,7 +5,7 @@ import React from "react";
 function Footer() {
   const router = useRouter();
   return (
-    <footer className="bg-[#2a3439] text-white max-w-full lg:h-[500px] h-full top-0 ">
+    <footer className="bg-[#2a3439] mt-10 text-white max-w-full h-full ">
       <div className="mr-auto ml-auto max-h-full max-w-[1300px] pr-4 pl-4  ">
         <div className="lg:flex">
           <section className="lg:pb-0  pr-0 pl-0 lg:mt-10  max-w-full sm:ml-[100px] lg:pt-0    pt-10">

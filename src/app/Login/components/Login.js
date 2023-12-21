@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { app, auth } from "../../firebase";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { useRouter } from "next/navigation";
 
 function Login() {
   const [reVer, setReVer] = useState(null);
@@ -11,6 +12,7 @@ function Login() {
     "Login to retain your progress! Thank you 😀"
   );
   const buttonRef = useRef(null);
+  const router = useRouter();
 
   async function onSignInSubmit(e) {
     e.preventDefault();
@@ -22,6 +24,7 @@ function Login() {
           setFooter("Sending your OTP Code...!!");
         })
         .catch((error) => {
+          setFooter("Technical Error, please try again later...!");
           console.log(error);
         });
     }
@@ -36,9 +39,12 @@ function Login() {
         .then((result) => {
           const user = result.user;
           setFooter("Your Code has been Verifyed, Welcome to Sahay!");
+          localStorage.setItem("phoneNumber", user.phoneNumber);
+          localStorage.setItem("userUID", user.uid);
           console.log(user);
         })
         .catch((error) => {
+          setFooter("Sorry, Wrong Code!");
           console.log(error);
         });
     }
@@ -54,6 +60,7 @@ function Login() {
     setReVer(reCaVer);
     console.log("Done");
   }, []);
+
   return (
     <>
       <div className="flex items-center justify-center h-[90vh] bg-green-800">
