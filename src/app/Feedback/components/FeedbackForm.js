@@ -24,8 +24,8 @@ isSubmited(false);
   return (
 <div className='bg-[#0b7261] h-[100vh] items-center justify-center flex '>
 {!submited ? (
-        <div className="w-full max-w-md mx-auto  bg-gray-200 p-10 ">
-            <h2 className="text-4xl font-bold text-center mb-8 sm:text-4xl underline  cursor-default">{notFirstSubmission?`Feedback` :`Feedback ${count}`}</h2>
+        <div className="w-full max-w-md mx-auto py-10 bg-gray-200 p-10 ">
+            <h2 className="text-4xl font-bold text-center py-0 mb-8 sm:text-4xl underline  cursor-default">{notFirstSubmission?`Feedback` :`Feedback ${count}`}</h2>
             <form onSubmit={onFormSubmition}>
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-lg font-semibold hover:underline ">Name</label>

@@ -49,7 +49,6 @@ function Login() {
       callback: (response) => {
         console.log("Hii");
         // reCAPTCHA solved, allow signInWithPhoneNumber.
-        onSignInSubmit();
       },
     });
     setReVer(reCaVer);
