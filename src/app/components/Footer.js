@@ -1,11 +1,10 @@
-'use client'
-import { useRouter } from 'next/navigation'
-import React from 'react'
+"use client";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 function Footer() {
-const router = useRouter()
+  const router = useRouter();
   return (
- 
     <footer className="bg-[#2a3439] text-white max-w-full lg:h-[500px] h-full top-0 lg:mt-[-22px] ">
       <div className="mr-auto ml-auto max-h-full max-w-[1300px] pr-4 pl-4  ">
         <div className="lg:flex">
@@ -13,8 +12,13 @@ const router = useRouter()
             <h1 className=" font-semibold text-[33px]  ">Get help!</h1>
             <ul className=" font-light text-[19px] pb-4 text-[#ffc832] pt-[35px] space-y-4 cursor-pointer">
               <li className="text-2xl cursor-default">Help us improve ? </li>
-              <li className="hover:underline text-xl" onClick={() => router.push('Feedback')}> Give feedback</li>
-
+              <li
+                className="hover:underline text-xl"
+                onClick={() => router.push("Feedback")}
+              >
+                {" "}
+                Give feedback
+              </li>
             </ul>
             <div className=" relative inline-block  text-base  ">
               <select
@@ -72,7 +76,7 @@ const router = useRouter()
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

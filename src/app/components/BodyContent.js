@@ -3,7 +3,7 @@ import React from 'react'
 function BodyContent() {
   return (
   <section className="bg-[#0b7261] text-white w-full h-[500px] top-0 mt-[-22px]">
-      <div className="mr-auto ml-auto h-full w-[1300px] pr-4 pl-4  ">
+      <div className="mr-auto ml-auto h-full w-full pr-4 pl-4  ">
         <div className="w-full h-[76px]">
           <header className="pb-0 pt-[10px] pr-0 ml-[56px]  inline-block mt-7 h-[76px] w-52 text-center bg-[#0b7261]">
             <h2 className="font-bold text-4xl">Schemes?</h2>

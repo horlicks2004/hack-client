@@ -1,14 +1,15 @@
-import React from 'react'
-import BodyHeader from './BodyHeader'
-import BodyContent from './BodyContent'
+"use client";
+import React from "react";
+import BodyHeader from "./BodyHeader";
+import BodyContent from "./BodyContent";
 
 function Body() {
   return (
-<>
-<BodyHeader/>
-<BodyContent/>
-</>
-  )
+    <>
+      <BodyHeader />
+      <BodyContent />
+    </>
+  );
 }
 
-export default Body
+export default Body;
